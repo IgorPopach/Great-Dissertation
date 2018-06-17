@@ -1,0 +1,26 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "buttons";
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-size: 14px;
+	font-weight: 400;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	color: #333;
+	background-color: #fff;
+}
+
+@import "views/site-header";
+@import "views/sidebars";
+@import "views/content";
+@import "views/site-footer";
+@import "media"; // Always at the end

@@ -1,0 +1,19 @@
+footer {
+  .yellow-line {
+    height: 40px;
+    background: $accent-color linear-gradient(to top, $accent-color, yellow);
+    border: 1px solid #FFEA00;
+  }
+  .row>.col-md-auto>a {
+      line-height: 40px;
+  }
+
+  &-contact {
+    .logo-footer {
+      display: inline-block;
+    }
+
+  }
+
+
+}
