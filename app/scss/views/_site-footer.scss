@@ -8,12 +8,58 @@ footer {
       line-height: 40px;
   }
 
-  &-contact {
-    .logo-footer {
-      display: inline-block;
+  .footer-info {
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+    color: $accent-text-color;
+    &-logo {
+      text-align: center;
+      .logo-footer {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .text-footer {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        span {
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
     }
 
-  }
 
+    .contact-info {
+      text-align: right;
+      font-size: 14px;
+      line-height: 14px;
+      a {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        line-height: 12px;
+        color: $accent-text-color;
+        border-right: 1px solid $accent-text-color;
+        &:hover {
+          text-decoration: none;
+          color: $accent-color;
+        }
+      }
+      &-phone {
+
+      }
+      &-text {
+        user-select: none;
+      }
+    }
+  }
+  
+  
+  .footer-pay {
+    margin: 20px 0;
+    height: 20px;
+    background-color: #E8E8E6;
+  }
 
 }
