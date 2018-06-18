@@ -24,16 +24,20 @@ header {
       }
     }
   }
-
+  .grafic-border {
+    height: 10px;
+    background: #e1e1e1 linear-gradient(to top,#fff 0,#fff 1%,#e0e0e0 37%,#fff 100%);
+  }
   .header-middle {
-    background-color: lightgoldenrodyellow;
+    background: url("../img/bg-head1.png") center center no-repeat;
+    height: 110px;
     .logo-header {
-      width: 180px;
-      height: 90px;
-      background-color: orange;
+      margin: 10px 0;
+      background: url("../img/logo.png") center 0 no-repeat;
+      height: 101px;
     }
     h1 {
-      font: 400 18px Tahoma;
+      font: 400 18px Georgia, SansSerif;
       span {
         font-weight: 700;
         font-size: 24px;
@@ -43,86 +47,91 @@ header {
       }
     }
   }
+  .grafic-border {
 
+  }
   .header-bottom {
     text-align: center;
     color: $second-text-color;
-    background-color: yellow;
-    nav {
-      position: relative;
-      top: -20px;
-      display: inline-block;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 3px 3px 13px 1px $accent-text-color;
-      ul {
-        display: table-row;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        li {
-          display: table-cell;
-          width: auto;
-          vertical-align: middle;
-          &:first-child a {
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-          }
-          &:last-child a {
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
-            &:after {
-              content: none;
+    background: url("../img/bg-head2.png") 0 0 no-repeat;
+    .header-menu {
+      margin-bottom: -32px;
+      nav {
+        position: relative;
+        top: -25px;
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 3px 3px 13px 1px $accent-text-color;
+        ul {
+          display: table-row;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          li {
+            display: table-cell;
+            width: auto;
+            vertical-align: middle;
+            &:first-child a {
+              border-top-left-radius: 5px;
+              border-bottom-left-radius: 5px;
             }
-          }
-          a {
-            position: relative;
-            display: block;
-            padding: 6px 10px;
-            line-height: 25px;
-            text-decoration: none;
-            color: inherit;
-            border-top: 2px solid transparent;
-            border-bottom: 3px solid transparent;
-            border-left: 1px solid transparent;
-            transition: color .3s;
-            cursor: pointer;
-            &:before {
-              content: '';
-              position: absolute;
-              top: 0;
-              left: 45%;
+            &:last-child a {
+              border-top-right-radius: 5px;
+              border-bottom-right-radius: 5px;
+              &:after {
+                content: none;
+              }
+            }
+            a {
+              position: relative;
               display: block;
-              width: 0;
-              height: 0;
-              border-width: 4px 5px 0 5px;
-              border-style: solid;
-              border-color: transparent;
-            }
-            &:after {
-              content: '';
-              position: absolute;
-              top: 50%;
-              right: 0;
-              margin-top: -10px;
-              height: 20px;
-              border-right: 1px dotted black;
-            }
-            &:hover {
+              padding: 6px 10px;
               line-height: 25px;
-              border-top: 2px solid #fb7200;
-              border-bottom: 3px solid #fb7200;
-              transition: all .6s;
+              text-decoration: none;
+              color: inherit;
+              border-top: 2px solid transparent;
+              border-bottom: 3px solid transparent;
+              border-left: 1px solid transparent;
+              transition: color .3s;
+              cursor: pointer;
               &:before {
-                border-color: #fb7200 transparent transparent transparent;
-                transition: all 1.0s;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 45%;
+                display: block;
+                width: 0;
+                height: 0;
+                border-width: 4px 5px 0 5px;
+                border-style: solid;
+                border-color: transparent;
+              }
+              &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: -10px;
+                height: 20px;
+                border-right: 1px dotted black;
+              }
+              &:hover {
+                line-height: 25px;
+                border-top: 2px solid #fb7200;
+                border-bottom: 3px solid #fb7200;
+                transition: all .6s;
+                &:before {
+                  border-color: #fb7200 transparent transparent transparent;
+                  transition: all 1.0s;
+                }
               }
             }
           }
         }
       }
-
     }
+
     .user-login-form {
       .no-padding {
         padding: 0;
