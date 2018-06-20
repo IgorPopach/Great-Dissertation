@@ -1,0 +1,72 @@
+.main-content {
+  margin-top: 55px;
+  padding: 0;
+  .home {
+    position: relative;
+    h1 {
+      position: absolute;
+      top: -82px;
+      background: url("../img/home/content-home.png") no-repeat;
+      width: 310px;
+      height: 64px;
+      font-family: Georgia;
+      font-size: 25px;
+      line-height: 64px;
+      text-align: center;
+      color: $red-text-color;
+    }
+  }
+  img {
+    margin-bottom: 25px;
+  }
+  p {
+    text-align: justify;
+  }
+  .price-calculator {
+    background-color: #e1eaef;
+    border: 2px solid #f0f5f8;
+    border-radius: 2px;
+    header {
+      background: url("../img/menu-bg-red.png") no-repeat;
+      background-color: yellow;
+      opacity: 0.5;
+      font-size: 20px;
+      font-family: Georgia, SansSerif;
+      line-height: 40px;
+      padding-left: 35px;
+      color: white;
+    }
+    &-table {
+      margin: 23px;
+    }
+  }
+
+  .some-reasons {
+    .info {
+      border: 1px solid $grey-light-color;
+      border-radius: 5px;
+      padding: 10px 0;
+      margin: 5px 0;
+      h2 {
+        line-height: 25px;
+        font-family: Tahoma;
+        font-weight: bold;
+        margin-bottom: 0;
+        color: $orange-color;
+      }
+      a>i {
+        color: $grey-light-color;
+        font-size: 25px;
+        border: 1px solid $grey-light-color;
+        border-radius: 50%;
+        padding: 1px;
+        &:hover {
+          color: $orange-color;
+        }
+      }
+    }
+    h3 {
+      color: $red-text-color;
+    }
+  }
+}

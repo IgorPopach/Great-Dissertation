@@ -1,14 +1,11 @@
 .header-middle {
-  .align-center {
-    text-align: center;
-  }
   .btn {
     display: inline-block;
     height: 45px;
     line-height: 45px;
     margin-top: 20px;
     border-radius: 5px;
-    background-color: $accent-color;
+    background-color: $yellow-color;
     box-shadow: 0 1px 0 1px #FEA009;
     a {
       line-height: 14px;
@@ -21,7 +18,7 @@
         line-height: 45px;
         font-size: 30px;
         text-align: center;
-        color: $accent-color;
+        color: $yellow-color;
         border-bottom-left-radius: 5px;
         border-top-left-radius: 5px;
         background-color: #484848;
@@ -32,7 +29,7 @@
           display: inline-block;
           width: 11px;
           height: 11px;
-          border: 1px solid $accent-color;
+          border: 1px solid $yellow-color;
           background-color: #14a85c;
           border-radius: 50%;
           top: 20px;
@@ -45,7 +42,7 @@
         height: 45px;
         font-size: 10px;
         padding: 0 20px;
-        color: $secondary-color;
+        color: $orange-color;
         span {
           font-weight: 600;
           font-size: 20px;
@@ -61,7 +58,7 @@
         line-height: 45px;
         font-size: 30px;
         text-align: center;
-        color: $accent-color;
+        color: $yellow-color;
         border-bottom-left-radius: 5px;
         border-top-left-radius: 5px;
         background-color: #484848;
@@ -75,7 +72,7 @@
         line-height: 12px;
         text-align: center;
         padding: 0 32px;
-        color: $secondary-color;
+        color: $orange-color;
         span {
           font-weight: 600;
           font-size: 14px;
@@ -85,13 +82,14 @@
     }
   }
 }
+
 .header-bottom {
   input[type=submit] {
     font-weight: 700;
     padding: 5px 12px;
     border: 1px solid #C0C0C0;
     border-radius: 5px;
-    color: $second-text-color;
+    color: $red-text-color;
     background-color: #fff;
     &:hover {
       background-color: #F0F0F0;
@@ -106,12 +104,142 @@
       font-size: 18px;
       padding: 10px 15px;
       text-decoration: none;
-      background-color: $second-text-color;
+      background-color: $red-text-color;
       border-radius: 5px;
       color: white;
       &:hover {
-        background-color: $secondary-color;
+        background-color: $orange-color;
         transition: all .3s;
+      }
+    }
+  }
+}
+
+.left-sidebar {
+  .btn {
+    text-align: center;
+    margin: 25px 0;
+    a {
+      font-weight: 700;
+      padding: 5px 12px;
+      border: 1px solid #C0C0C0;
+      border-radius: 5px;
+      color: $red-text-color;
+      background-color: #fff;
+      &:hover {
+        text-decoration: none;
+        background-color: #F0F0F0;
+        transition: all .3s;
+      }
+    }
+  }
+
+  .customer-support {
+    position: relative;
+    .btn {
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .live-chat {
+      position: absolute;
+      top: 282px;
+      left: 78px;
+      a {
+        display: inline-block;
+        background: url("../img/live-chat-btn.png") no-repeat;
+        width: 132px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+.main-content {
+  .home {
+    .price-calculator {
+      &-table {
+        .btn {
+          a {
+            padding: 15px 30px;
+            font-weight: 500;
+            text-decoration: none;
+            background-color: $red-text-color;
+            border-radius: 5px;
+            color: white;
+            &:hover {
+              background-color: $orange-color;
+              transition: all .3s;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .some-reasons {
+    .btn {
+      margin: 30px 0;
+      a {
+        font-size: 16px;
+        padding: 10px 25px;
+        color: $orange-color;
+        border: 1px solid $grey-light-color;
+        border-radius: 10px;
+        &:hover {
+          text-decoration: none;
+          color: white;
+          background-color: $orange-color;
+          transition: .3s;
+        }
+      }
+
+      &-order {
+        display: inline-block;
+        border: 1px solid $grey-light-color;
+        border-radius: 30px;
+        margin: 60px 0;
+        padding: 1px;
+        a {
+          display: inline-block;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 16px;
+          color: $grey-text-color;
+          padding: 14px 30px;
+          border: 1px solid $grey-light-color;
+          border-radius: 30px;
+          &:hover {
+            text-decoration: none;
+            color: white;
+            background-image: linear-gradient(white, cornflowerblue);
+            box-shadow: 2px 2px 5px 2px lightgray;
+            transition: all .3s;
+          }
+        }
+      }
+      &-live {
+        display: inline-block;
+        border: 1px solid $grey-light-color;
+        border-radius: 30px;
+        margin: 60px 0;
+        padding: 1px;
+        a {
+          display: inline-block;
+          text-decoration: none;
+          font-weight: 600;
+          font-size: 16px;
+          color: $grey-text-color;
+          padding: 14px 30px;
+          border: 1px solid $grey-light-color;
+          border-radius: 30px;
+          &:hover {
+            text-decoration: none;
+            color: white;
+            background-image: linear-gradient(white, indianred);
+            box-shadow: 2px 2px 5px 2px lightgray;
+            transition: all .3s;
+          }
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 footer {
   .yellow-line {
     height: 40px;
-    background: $accent-color linear-gradient(to top, $accent-color, yellow);
+    background: $yellow-color linear-gradient(to top, $yellow-color, yellow);
     border: 1px solid #FFEA00;
   }
   .row>.col-md-auto>a {
@@ -11,7 +11,7 @@ footer {
   .footer-info {
     padding-top: 25px;
     border-top: 1px solid #eee;
-    color: $accent-text-color;
+    color: $grey-text-color;
     &-logo {
       text-align: center;
       .logo-footer {
@@ -39,11 +39,11 @@ footer {
         margin-bottom: 10px;
         padding: 0 10px;
         line-height: 12px;
-        color: $accent-text-color;
-        border-right: 1px solid $accent-text-color;
+        color: $grey-text-color;
+        border-right: 1px solid $grey-text-color;
         &:hover {
           text-decoration: none;
-          color: $accent-color;
+          color: $yellow-color;
         }
       }
       &-phone {

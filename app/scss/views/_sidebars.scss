@@ -1,47 +1,284 @@
-section {
-  .left-sidebar {
-    .menu-menu {
+.left-sidebar {
+  .margin-bottom {
+    margin-bottom: 20px;
+  }
 
-      header {
-        background: url("../img/menu-bg-red.png") no-repeat;
-        background-color: yellow;
-        opacity: 0.5;
-        font-size: 20px;
-        font-family: Georgia, SansSerif;
-        line-height: 40px;
-        padding-left: 35px;
-        color: white;
+  .menu-menu, .menu-dissertation {
+    nav.rectangle-1 {
+      width: 300px;
+      padding: 1px 1px 1px 0;
+      border-top: 1px solid #e1e1e1;
+      border-right: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+      border-left: 10px solid #BECED7;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      .rectangle-2 {
+        border-top: 1px solid #edf3f6;
+        border-right: 1px solid #edf3f6;
+        border-bottom: 1px solid #edf3f6;
+        border-left: 10px solid #eff3f5;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        ul {
+          margin-bottom: -1px;
+          padding-left: 20px;
+          list-style-image: url("../img/menu-circle.png");
+          background: url("../img/menu-line.png") 0 -1px;
+          background-size: auto 30px;
+          li a {
+            line-height: 30px;
+            text-decoration: none;
+            color: $sidebar-text-color;
+            &:hover {
+              color: $orange-color;
+            }
+          }
+        }
       }
-      nav.rectangle-1 {
-        width: 280px;
-        padding: 1px 1px 1px 0;
-        border-top: 1px solid #e1e1e1;
-        border-right: 1px solid #e1e1e1;
-        border-bottom: 1px solid #e1e1e1;
-        border-left: 10px solid #BECED7;
+    }
+  }
+  .menu-menu {
+    header {
+      background: url("../img/menu-bg-red.png") no-repeat;
+      background-color: yellow;
+      opacity: 0.5;
+      font-size: 20px;
+      font-family: Georgia, SansSerif;
+      line-height: 40px;
+      padding-left: 35px;
+      color: white;
+    }
+  }
+  .menu-dissertation {
+    position: relative;
+    header {
+      background: url("../img/menu-bg-red.png") no-repeat;
+      font-size: 20px;
+      font-family: Georgia, SansSerif;
+      line-height: 40px;
+      padding-left: 35px;
+      color: white;
+    }
+    img {
+      position: absolute;
+      top: -10px;
+      right: 10px;
+    }
+  }
+  .menu-features {
+    header {
+      background: url("../img/menu-bg-red.png") no-repeat;
+      background-color: yellow;
+      opacity: 0.5;
+      font-size: 20px;
+      font-family: Georgia, SansSerif;
+      line-height: 40px;
+      padding-left: 35px;
+      color: white;
+    }
+    .rectangle-1 {
+      width: 300px;
+      padding: 1px 1px 1px 0;
+      border-top: 1px solid #e1e1e1;
+      border-right: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+      border-left: 10px solid #BECED7;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      .rectangle-2 {
+        border-top: 1px solid #edf3f6;
+        border-right: 1px solid #edf3f6;
+        border-bottom: 1px solid #edf3f6;
+        border-left: 10px solid #eff3f5;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        ul {
+          margin-bottom: -1px;
+          padding-left: 20px;
+          list-style-image: url("../img/check.png");
+          background: url("../img/menu-line.png") 0 -1px;
+          background-size: auto 30px;
+          li {
+            line-height: 30px;
+            text-decoration: none;
+            color: $sidebar-text-color;
+
+            span {
+              font-weight: bold;
+              color: $orange-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .customer-support {
+    header {
+      background: url("../img/menu-bg-red.png") no-repeat;
+      background-color: yellow;
+      opacity: 0.5;
+      font-size: 20px;
+      font-family: Georgia, SansSerif;
+      line-height: 40px;
+      padding-left: 35px;
+      color: white;
+    }
+    .bg-image {
+      background: url("../img/customer-suport.png") no-repeat;
+      width: 300px;
+      height: 279px;
+      .rectangle-1 {
+        height: 100%;
+        border-left: 11px solid rgba(55, 177, 197, 0.7);
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         .rectangle-2 {
-          border-top: 1px solid #edf3f6;
-          border-right: 1px solid #edf3f6;
-          border-bottom: 1px solid #edf3f6;
-          border-left: 10px solid #eff3f5;
-          border-top-right-radius: 5px;
-          border-bottom-right-radius: 5px;
-          ul {
-            margin-bottom: -1px;
-            padding-left: 20px;
-            list-style-image: url("../img/menu-circle.png");
-            background: url("../img/menu-line.png") 0 -1px;
-            background-size: auto 30px;
-            li a {
-              line-height: 30px;
-              text-decoration: none;
-              color: #333366;
-              &:hover {
-                color: $secondary-color;
-              }
+          height: 100%;
+          padding-top: 14px;
+          border-left: 10px solid rgba(56, 176, 197, 0.3);
+          .got-any {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 16px;
+            margin-bottom: 20px;
+            color: white;
+            span {
+              color: $orange-color;
+              text-transform: uppercase;
+              text-shadow: rgb(255, 255, 255) 3px 0px 0px, rgb(255, 255, 255) 2.83487px 0.981584px 0px, rgb(255, 255,
+                      255) 2.35766px 1.85511px 0px, rgb(255, 255, 255) 1.62091px 2.52441px 0px, rgb(255, 255, 255) 0.705713px 2.91581px 0px, rgb(255, 255, 255) -0.287171px 2.98622px 0px, rgb(255, 255, 255) -1.24844px 2.72789px 0px, rgb(255, 255, 255) -2.07227px 2.16926px 0px, rgb(255, 255, 255) -2.66798px 1.37182px 0px,
+              rgb(255, 255, 255) -2.96998px 0.42336px 0px, rgb(255, 255, 255) -2.94502px -0.571704px 0px,
+              rgb(255, 255, 255) -2.59586px -1.50383px 0px, rgb(255, 255, 255) -1.96093px -2.27041px 0px,
+              rgb(255, 255, 255) -1.11013px -2.78704px 0px, rgb(255, 255, 255) -0.137119px -2.99686px 0px,
+              rgb(255, 255, 255) 0.850987px -2.87677px 0px, rgb(255, 255, 255) 1.74541px -2.43999px 0px,
+              rgb(255, 255, 255) 2.44769px -1.73459px 0px, rgb(255, 255, 255) 2.88051px -0.838247px 0px;
             }
+          }
+          p {
+            font-size: 24px;
+            line-height: 18px;
+            margin-bottom: 15px;
+          }
+
+          .contact-phone {
+            font-size: 16px;
+            line-height: 16px;
+            color: #1689be;
+            text-shadow: rgb(255, 255, 255) 3px 0px 0px, rgb(255, 255, 255) 2.83487px 0.981584px 0px, rgb(255, 255,
+                    255) 2.35766px 1.85511px 0px, rgb(255, 255, 255) 1.62091px 2.52441px 0px, rgb(255, 255, 255) 0.705713px 2.91581px 0px, rgb(255, 255, 255) -0.287171px 2.98622px 0px, rgb(255, 255, 255) -1.24844px 2.72789px 0px, rgb(255, 255, 255) -2.07227px 2.16926px 0px, rgb(255, 255, 255) -2.66798px 1.37182px 0px,
+            rgb(255, 255, 255) -2.96998px 0.42336px 0px, rgb(255, 255, 255) -2.94502px -0.571704px 0px,
+            rgb(255, 255, 255) -2.59586px -1.50383px 0px, rgb(255, 255, 255) -1.96093px -2.27041px 0px,
+            rgb(255, 255, 255) -1.11013px -2.78704px 0px, rgb(255, 255, 255) -0.137119px -2.99686px 0px,
+            rgb(255, 255, 255) 0.850987px -2.87677px 0px, rgb(255, 255, 255) 1.74541px -2.43999px 0px,
+            rgb(255, 255, 255) 2.44769px -1.73459px 0px, rgb(255, 255, 255) 2.88051px -0.838247px 0px;
+            a {
+              color: $red-text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .best-price {
+    background: url("../img/best-price.png") center top no-repeat;
+    text-align: center;
+    padding-top: 69px;
+    margin-top: 30px;
+    p {
+      font-family: "Arial Black";
+      font-size: 22px;
+      background: -webkit-linear-gradient(#fff 12%, #e60000 59%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .authenticity {
+    display: inline-block;
+    font-size: 18px;
+    color: #1689be;
+    border: 1px solid $grey-text-color;
+    padding: 13px 25px;
+    border-radius: 25px;
+    box-shadow: 0 0 2px 2px $grey-text-color;
+    p {
+      margin-bottom: 0;
+      span {
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 5px;
+        color: $red-text-color;
+      }
+    }
+  }
+}
+
+.right-sidebar {
+  .bg-yellow {
+    background: url("../img/home/bg-yellow-sidebar.png") 0 -5px no-repeat;
+    width: 349px;
+    height: 59px;
+  }
+  .social {
+    text-align: right;
+    margin: 30px 5px;
+    a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      background-color: #8c8a8a;
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+      i {
+        font-size: 25px;
+        line-height: 35px;
+      }
+      &:hover {
+        background-color: $orange-color;
+        transition: .3s;
+      }
+    }
+  }
+  .we-guarantee {
+    text-align: right;
+    header {
+      background: url("../img/home/bg-orange-sidebar.png") right 0 no-repeat;
+      font-size: 20px;
+      font-family: Georgia, SansSerif;
+      line-height: 40px;
+      padding-right: 90px;
+      color: white;
+    }
+    .rectangle-1 {
+      width: 300px;
+      padding: 1px 1px 1px 0;
+      border-top: 1px solid #e1e1e1;
+      border-left: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+      border-right: 10px solid #BECED7;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      .rectangle-2 {
+        border-top: 1px solid #edf3f6;
+        border-left: 1px solid #edf3f6;
+        border-bottom: 1px solid #edf3f6;
+        border-right: 10px solid #eff3f5;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        ul {
+          margin-bottom: -1px;
+          padding-left: 40px;
+          list-style-image: url("../img/check.png");
+          background: url("../img/menu-line.png") 0 -1px;
+          background-size: auto 30px;
+          text-align: left;
+          li {
+            line-height: 30px;
+            text-decoration: none;
+            color: $sidebar-text-color;
           }
         }
       }

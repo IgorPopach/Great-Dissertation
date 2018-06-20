@@ -12,11 +12,18 @@ body {
 	font-weight: 400;
 	min-width: 320px;
 	position: relative;
-	line-height: 1.65;
+	line-height: 18px;
 	font-family: $default-font;
 	overflow-x: hidden;
-	color: #333;
+	color: $grey-text-color;
 	background-color: #fff;
+
+	.align-center {
+		text-align: center;
+	}
+	.no-padding-left {
+		padding-left: 0;
+	}
 }
 
 @import "views/site-header";

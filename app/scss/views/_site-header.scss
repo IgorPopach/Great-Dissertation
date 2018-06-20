@@ -20,7 +20,7 @@ header {
       .block-left, .block-right {
         width: 215px;
         height: 15px;
-        background-color: $secondary-color;
+        background-color: $orange-color;
       }
     }
   }
@@ -41,7 +41,7 @@ header {
       span {
         font-weight: 700;
         font-size: 24px;
-        color: $secondary-color;
+        color: $orange-color;
         margin-right: 5px;
         text-shadow: 3px 3px 5px grey;
       }
@@ -52,7 +52,7 @@ header {
   }
   .header-bottom {
     text-align: center;
-    color: $second-text-color;
+    color: $red-text-color;
     background: url("../img/bg-head2.png") 0 0 no-repeat;
     .header-menu {
       margin-bottom: -32px;
@@ -62,7 +62,7 @@ header {
         display: inline-block;
         background-color: #fff;
         border-radius: 5px;
-        box-shadow: 3px 3px 13px 1px $accent-text-color;
+        box-shadow: 3px 3px 13px 1px $grey-text-color;
         ul {
           display: table-row;
           list-style-type: none;
@@ -142,7 +142,7 @@ header {
       label {
         font-size: 18px;
         text-align: right;
-        color: $second-text-color;
+        color: $red-text-color;
       }
       input[type=text], input[type=password] {
         width: 100%;
@@ -156,7 +156,7 @@ header {
         }
       }
       a {
-        color: $second-text-color;
+        color: $red-text-color;
       }
     }
   }
