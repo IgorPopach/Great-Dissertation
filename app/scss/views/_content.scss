@@ -1,6 +1,9 @@
 .main-content {
   margin-top: 55px;
   padding: 0;
+  .img-width {
+    width: 100%;
+  }
   .home {
     position: relative;
     h1 {
@@ -22,22 +25,51 @@
   p {
     text-align: justify;
   }
+
   .price-calculator {
-    background-color: #e1eaef;
-    border: 2px solid #f0f5f8;
-    border-radius: 2px;
+    display: inline-block;
+    max-width: 940px;
     header {
-      background: url("../img/menu-bg-red.png") no-repeat;
-      background-color: yellow;
-      opacity: 0.5;
+      background: url("../img/menu-left.png") no-repeat;
       font-size: 20px;
       font-family: Georgia, SansSerif;
+      text-align: left;
       line-height: 40px;
       padding-left: 35px;
       color: white;
     }
+    &-border {
+      background-color: #e1eaef;
+      border: 2px solid #e1eaef;
+      border-radius: 1px;
+    }
     &-table {
-      margin: 23px;
+      border: 2px solid #f0f5f8;
+      border-radius: 2px;
+      text-align: left;
+      padding: 5px;
+      label {
+        font-weight: bold;
+        font-size: 14px;
+        margin: 5px;
+        color: #2a373e;
+      }
+      select {
+        display: block;
+        width: 100%;
+        height: 35px;
+      }
+      p {
+        font-weight: bold;
+        font-size: 14px;
+        text-align: center;
+        margin: 20px;
+        color: #2a373e;
+        span {
+          
+          color: $red-text-color;
+        }
+      }
     }
   }
 
