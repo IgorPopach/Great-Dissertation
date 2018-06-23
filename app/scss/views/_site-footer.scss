@@ -4,18 +4,30 @@ footer {
     background: $yellow-color linear-gradient(to top, $yellow-color, yellow);
     border: 1px solid #FFEA00;
   }
-  .row>.col-md-auto>a {
-      line-height: 40px;
+  .list {
+    text-align: center;
+    .text {
+      display: inline-block;
+      text-align-last: left;
+      padding: 20px;
+      a {
+        text-decoration: none;
+        color: $grey-text-color;
+      }
+    }
   }
 
   .footer-info {
-    padding-top: 25px;
+    padding: 20px 0;
     border-top: 1px solid #eee;
     color: $grey-text-color;
     &-logo {
       text-align: center;
       .logo-footer {
         display: inline-block;
+        background: url("../img/home/logo-footer.png") no-repeat;
+        width: 54px;
+        height: 54px;
         vertical-align: middle;
       }
       .text-footer {
@@ -57,9 +69,11 @@ footer {
   
   
   .footer-pay {
-    margin: 20px 0;
-    height: 20px;
-    background-color: #E8E8E6;
+    height: 75px;
+    background: #E8E8E6 url("../img/home/payment.png") center center no-repeat;
+
+    padding: 15px 0;
   }
+
 
 }

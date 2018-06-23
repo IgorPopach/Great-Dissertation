@@ -66,8 +66,16 @@
         margin: 20px;
         color: #2a373e;
         span {
-          
+          font-size: 16px;
           color: $red-text-color;
+        }
+      }
+      @media screen and (max-width: 575px) {
+        p {
+          font-size: 18px;
+          span {
+            font-size: 18px;
+          }
         }
       }
     }

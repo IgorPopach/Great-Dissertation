@@ -1,0 +1,47 @@
+header {
+  .header-middle {
+    .logo-header-small {
+      margin: 10px 0;
+      background: url("../img/home/logo-small.png") center 0 no-repeat;
+      height: 71px;
+    }
+  }
+
+  .header-bottom {
+    .toll-free-mobile {
+      a {
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+
+
+
+footer {
+  .social {
+    margin: 10px 5px;
+    a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      background-color: #8c8a8a;
+      color: white;
+      text-align: center;
+      vertical-align: middle;
+      i {
+        font-size: 25px;
+        line-height: 35px;
+      }
+      &:hover {
+        background-color: #ff5a00;
+        transition: .3s;
+      }
+    }
+  }
+}
