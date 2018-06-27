@@ -226,7 +226,7 @@
 .right-sidebar {
   .bg-yellow {
     background: url("../img/home/bg-yellow-sidebar.png") 0 -5px no-repeat;
-    width: 349px;
+    max-width: 349px;
     height: 59px;
   }
   .social {
@@ -254,11 +254,11 @@
   .we-guarantee {
     text-align: right;
     header {
-      background: url("../img/home/bg-orange-sidebar.png") 0 0 no-repeat;
+      background: url("../img/home/bg-orange-sidebar.png") 33px 0 no-repeat;
       font-size: 20px;
       font-family: Georgia, SansSerif;
       line-height: 40px;
-      padding-right: 90px;
+      padding-right: 5px;
       color: white;
     }
     .rectangle-1 {
@@ -294,13 +294,13 @@
     }
   }
   .discount {
+    text-align: right;
     header {
-      background: url("../img/home/bg-orange-sidebar.png") 0 0 no-repeat;
+      background: url("../img/home/bg-orange-sidebar.png") 33px 0 no-repeat;
       font-size: 20px;
       font-family: Georgia, SansSerif;
       line-height: 40px;
-      text-align: right;
-      padding-right: 90px;
+      padding-right: 5px;
       color: white;
     }
     .rectangle-1 {
@@ -368,13 +368,13 @@
     }
   }
   .faq {
+    text-align: right;
     header {
-      background: url("../img/home/bg-orange-sidebar.png") 0 0 no-repeat;
+      background: url("../img/home/bg-orange-sidebar.png") 33px 0 no-repeat;
       font-size: 20px;
       font-family: Georgia, SansSerif;
       line-height: 40px;
-      text-align: right;
-      padding-right: 90px;
+      padding-right: 5px;
       color: white;
     }
     .rectangle-1 {
@@ -416,13 +416,13 @@
     }
   }
   .chat {
+    text-align: right;
     header {
-      background: url("../img/home/bg-orange-sidebar.png") 0 0 no-repeat;
+      background: url("../img/home/bg-orange-sidebar.png") 33px 0 no-repeat;
       font-size: 20px;
       font-family: Georgia, SansSerif;
       line-height: 40px;
-      text-align: right;
-      padding-right: 90px;
+      padding-right: 5px;
       color: white;
     }
     .rectangle-1 {
