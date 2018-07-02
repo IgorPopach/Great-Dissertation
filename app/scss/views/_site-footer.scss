@@ -71,8 +71,10 @@ footer {
   .footer-pay {
     height: 75px;
     background: #E8E8E6 url("../img/home/payment.png") center center no-repeat;
-
     padding: 15px 0;
+    @media screen and (max-width: 724px) {
+      background-size: 98%;
+    }
   }
 
 

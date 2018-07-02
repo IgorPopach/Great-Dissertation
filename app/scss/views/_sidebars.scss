@@ -180,6 +180,9 @@
         }
       }
     }
+    @media screen and (max-width: 1626px) {
+      display: none;
+    }
   }
 
   .best-price {
@@ -230,7 +233,7 @@
     height: 59px;
   }
   .social {
-    text-align: right;
+    text-align: center;
     margin: 30px 5px;
     a {
       display: inline-block;
@@ -258,7 +261,7 @@
       font-size: 20px;
       font-family: Georgia, SansSerif;
       line-height: 40px;
-      padding-right: 5px;
+      padding-right: 15px;
       color: white;
     }
     .rectangle-1 {
@@ -300,7 +303,7 @@
       font-size: 20px;
       font-family: Georgia, SansSerif;
       line-height: 40px;
-      padding-right: 5px;
+      padding-right: 15px;
       color: white;
     }
     .rectangle-1 {
@@ -374,7 +377,7 @@
       font-size: 20px;
       font-family: Georgia, SansSerif;
       line-height: 40px;
-      padding-right: 5px;
+      padding-right: 15px;
       color: white;
     }
     .rectangle-1 {
@@ -397,7 +400,7 @@
         ul {
           list-style-type: none;
           li {
-            padding: 8px 0;
+            padding: 8px 5px;
             border-bottom: 1px dotted black;
             &:last-child {
               border-bottom: none;
@@ -422,7 +425,7 @@
       font-size: 20px;
       font-family: Georgia, SansSerif;
       line-height: 40px;
-      padding-right: 5px;
+      padding-right: 15px;
       color: white;
     }
     .rectangle-1 {
@@ -447,6 +450,7 @@
       display: inline-block;
       text-align: justify;
       max-width: 220px;
+      padding: 0 5px;
       p {
         a {
           text-decoration: none;

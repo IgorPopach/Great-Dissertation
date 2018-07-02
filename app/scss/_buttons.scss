@@ -80,6 +80,9 @@
         }
       }
     }
+    @media screen and (max-width: 991px) {
+      margin-top: 30px;
+    }
   }
 
   //dropdown menu start
@@ -189,10 +192,10 @@
       margin-bottom: 32px;
     }
     .live-chat {
-      position: absolute;
-      top: 282px;
-      left: 78px;
+      text-align: center;
       a {
+        position: relative;
+        top: -37px;
         display: inline-block;
         background: url("../img/live-chat-btn.png") no-repeat;
         width: 132px;
