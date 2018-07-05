@@ -1,87 +1,150 @@
-var syntax        = 'scss'; // Syntax: sass or scss;
 
-var gulp          = require('gulp'),
-    gutil         = require('gulp-util'),
-    sass          = require('gulp-sass'),
-    browsersync   = require('browser-sync'),
-    clean         = require('gulp-clean'),
-	rigger 		  = require('gulp-rigger'),
-    concat 		  = require('gulp-concat'),
-    uglify 		  = require('gulp-uglify'),
-    cleancss 	  = require('gulp-clean-css'),
-    rename 		  = require('gulp-rename'),
-    autoprefixer  = require('gulp-autoprefixer'),
-    notify 		  = require("gulp-notify"),
-    rsync 		  = require('gulp-rsync');
-
-
+var gulp = require('gulp'),
+    watch = require('gulp-watch'),
+    prefixer = require('gulp-autoprefixer'),
+    uglify = require('gulp-uglify'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
+    rigger = require('gulp-rigger'),
+    cssmin = require('gulp-minify-css'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+    rimraf = require('rimraf'),
+    browserSync = require("browser-sync"),
+    reload = browserSync.reload,
+    spritesmith = require('gulp.spritesmith');
 
 
 
-gulp.task('browser-sync', function() {
-	browsersync({
-		server: {
-			baseDir: 'app'
-		},
-		notify: false,
-		// open: false,
-		// tunnel: true,
-		// tunnel: "projectname", //Demonstration page: http://projectname.localtunnel.me
-	})
+var path = {
+    build: {
+        html: 'dist/',
+        js: 'dist/js/',
+        css: 'dist/css/',
+        img: 'dist/img/',
+        fonts: 'dist/fonts/'
+    },
+    src: {
+        html: 'app/*.html',
+        js: 'app/js/common.js',
+        style: 'app/scss/main.scss',
+        img: 'app/img/**/*.*',
+        fonts: 'app/fonts/**/*.*'
+    },
+    watch: {
+        html: 'app/**/*.html',
+        js: 'app/js/**/*.js',
+        style: 'app/scss/**/*.scss',
+        img: 'app/img/**/*.*',
+        fonts: 'app/fonts/**/*.*'
+    },
+    clean: './build'
+};
+
+var config = {
+    server: {
+        baseDir: "./dist"
+    },
+    tunnel: true,
+    host: 'localhost',
+    port: 9000,
+    logPrefix: "Frontend"
+};
+
+gulp.task('webserver', function () {
+    browserSync(config);
 });
 
-gulp.task('clean-html', function () {
-    return gulp.src('app/index.html', {read: false})
-	.pipe(clean());
+gulp.task('clean', function (cb) {
+    rimraf(path.clean, cb);
 });
 
 gulp.task('html:build', function () {
-    return gulp.src('app/template/index.html')
-	.pipe(rigger())
-	.pipe(gulp.dest('app'))
-	.pipe(browsersync.reload( {stream: true} ))
+    gulp.src(path.src.html)
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.html))
+        .pipe(reload({stream: true}));
 });
 
-gulp.task('styles', function() {
-	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
-	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
-	.pipe(rename({ suffix: '.min', prefix : '' }))
-	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
-	.pipe(gulp.dest('app/css'))
-	.pipe(browsersync.reload( {stream: true} ))
+gulp.task('js:build', function () {
+    gulp.src(path.src.js)
+    //.pipe(rigger())
+    //.pipe(sourcemaps.init())
+        .pipe(uglify())
+        //.pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({stream: true}));
 });
 
-gulp.task('js', function() {
-	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
-		'app/js/common.js', // Always at the end
-		])
-	.pipe(concat('scripts.min.js'))
-	// .pipe(uglify()) // Mifify js (opt.)
-	.pipe(gulp.dest('app/js'))
-	.pipe(browsersync.reload({ stream: true }))
+gulp.task('style:build', function () {
+    gulp.src(path.src.style)
+    //.pipe(sourcemaps.init())
+        .pipe(sass({
+            includePaths: ['app/scss/**/*.*'],
+            outputStyle: 'compressed',
+            sourceMap: true,
+            errLogToConsole: true
+        }))
+        .pipe(prefixer())
+        .pipe(cssmin())
+        //.pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.build.css))
+        .pipe(reload({stream: true}));
 });
 
-gulp.task('rsync', function() {
-	return gulp.src('app/**')
-	.pipe(rsync({
-		root: 'app/',
-		hostname: 'username@yousite.com',
-		destination: 'yousite/public_html/',
-		// include: ['*.htaccess'], // Includes files to deploy
-		exclude: ['**/Thumbs.db', '**/*.DS_Store'], // Excludes files from deploy
-		recursive: true,
-		archive: true,
-		silent: false,
-		compress: true
-	}))
+gulp.task('image:build', function () {
+    gulp.src(path.src.img)
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()],
+            interlaced: true
+        }))
+        .pipe(gulp.dest(path.build.img))
+        .pipe(reload({stream: true}));
 });
 
-gulp.task('watch', ['clean-html','html:build','styles', 'js', 'browser-sync'], function() {
-	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
-	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
-	gulp.watch('app/**/*.html', ['clean-html','html:build'], browsersync.reload)
+gulp.task('fonts:build', function() {
+    gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.build.fonts))
 });
 
-gulp.task('default', ['watch']);
+gulp.task('build', [
+    'html:build',
+    'style:build',
+    'fonts:build',
+    'image:build',
+    'js:build'
+]);
+
+
+gulp.task('watch', function(){
+    watch([path.watch.html], function(event, cb) {
+        gulp.start('html:build');
+    });
+    watch([path.watch.style], function(event, cb) {
+        gulp.start('style:build');
+    });
+    watch([path.watch.js], function(event, cb) {
+        gulp.start('js:build');
+    });
+    watch([path.watch.img], function(event, cb) {
+        gulp.start('image:build');
+    });
+    watch([path.watch.fonts], function(event, cb) {
+        gulp.start('fonts:build');
+    });
+});
+
+gulp.task('sprite', function () {
+    var spriteData = gulp.src('app/img/icons/*.png').pipe(spritesmith({
+        imgName: 'sprite.png',
+        cssName: 'sprite.css',
+        algorithm: 'top-down',
+        padding: 500
+    }));
+    return spriteData.pipe(gulp.dest('app/sprites/'));
+});
+
+
+gulp.task('default', ['build', 'webserver', 'watch']);
