@@ -246,7 +246,6 @@
     &-order {
       display: inline-block;
       width: 152px;
-      border: 1px solid $grey-light-color;
       border-radius: 30px;
       margin: 10px;
       padding: 1px;
@@ -256,9 +255,9 @@
         width: 104px;
         height: 5px;
         background: linear-gradient(#00b1e8, #fff);
-        position: absolute;
-        top: 7px;
-        left: 50px;
+        position: relative;
+        top: 6px;
+        left: 0;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
       }
@@ -268,8 +267,8 @@
         font-weight: 600;
         font-size: 16px;
         color: $grey-text-color;
-        padding: 14px 30px;
-        border: 1px solid $grey-light-color;
+        padding: 14px 28px;
+        border: 3px double $grey-light-color;
         border-radius: 30px;
         &:hover {
           text-decoration: none;
@@ -277,13 +276,14 @@
           background-image: linear-gradient(white, cornflowerblue);
           box-shadow: 2px 2px 5px 2px lightgray;
           transition: all .3s;
+          border: 0px solid transparent;
+          padding: 16px 30px;
         }
       }
     }
     &-live {
       display: inline-block;
       width: 152px;
-      border: 1px solid $grey-light-color;
       border-radius: 30px;
       margin: 10px;
       padding: 1px;
@@ -293,9 +293,9 @@
         width: 104px;
         height: 5px;
         background: linear-gradient(#f01a22, #fff);
-        position: absolute;
-        top: 7px;
-        left: 50px;
+        position: relative;
+        top: 6px;
+        left: 0;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
       }
@@ -305,8 +305,8 @@
         font-weight: 600;
         font-size: 16px;
         color: $red-text-color;
-        padding: 14px 38px;
-        border: 1px solid $grey-light-color;
+        padding: 14px 36px;
+        border: 3px double $grey-light-color;
         border-radius: 30px;
         &:hover {
           text-decoration: none;
@@ -314,16 +314,25 @@
           background-image: linear-gradient(white, indianred);
           box-shadow: 2px 2px 5px 2px lightgray;
           transition: all .3s;
+          border: 0px solid transparent;
+          padding: 16px 38px;
         }
       }
+    }
+    &-form {
+      margin: 30px auto;
+      padding: 18px 40px;
+      font-weight: bold;
+      font-size: 16px;
+      color: $grey-text-color;
+      border: 1px solid $grey-light-color;
+      border-radius: 15px;
+      background: linear-gradient(#e1e3e7, #fff 80%, #e1e3e7);
     }
   }
   .padding-top-bottom {
     padding: 60px 0;
   }
-}
-  .some-reasons, .answers {
-
 }
 
 .right-sidebar {
