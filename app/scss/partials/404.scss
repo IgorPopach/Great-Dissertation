@@ -1,0 +1,37 @@
+.main-content {
+  .error {
+
+    &-number {
+      position: relative;
+      font-size: 280px;
+      font-family: LetterGothicStd;
+      line-height: 280px;
+      text-align: center;
+      color: #ffd000;
+      span {
+        color: #252525;
+      }
+    }
+    &-text {
+      position: absolute;
+      top: 33%;
+      &-first {
+        font-weight: bold;
+        font-size: 74px;
+        font-family: LetterGothicStd;
+        line-height: 74px;
+        color: #252525;
+        background-color: #fff;
+      }
+      &-second {
+        font-weight: 300;
+        font-size: 35px;
+        font-family: Calibri;
+        line-height: 30px;
+        padding: 10px 0;
+        color: #a4a3a3;
+        background-color: #fff;
+      }
+    }
+  }
+}
