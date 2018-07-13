@@ -1,8 +1,10 @@
 .main-content {
+  text-align: center;
   .error {
-
+    display: inline-block;
+    position: relative;
     &-number {
-      position: relative;
+      display: inline-block;
       font-size: 280px;
       font-family: LetterGothicStd;
       line-height: 280px;
@@ -14,23 +16,56 @@
     }
     &-text {
       position: absolute;
-      top: 33%;
+      top: 29%;
+      background-color: #fff;
       &-first {
+        display: inline-block;
         font-weight: bold;
-        font-size: 74px;
+        font-size: 68px;
         font-family: LetterGothicStd;
-        line-height: 74px;
+        line-height: 61px;
+        padding: 5px 0;
         color: #252525;
-        background-color: #fff;
       }
       &-second {
+        display: inline-block;
         font-weight: 300;
         font-size: 35px;
         font-family: Calibri;
         line-height: 30px;
-        padding: 10px 0;
+        padding-left: 48px;
+        text-align: left;
         color: #a4a3a3;
-        background-color: #fff;
+      }
+    }
+    p {
+      font-size: 20px;
+      font-family: Tahoma;
+      text-align: center;
+      color: #000;
+    }
+    @media screen and (min-width: 992px) {
+      width: 624px;
+    }
+    @media screen and (max-width: 991px) {
+      width: 260px;
+      .error {
+        &-number {
+          font-size: 100px;
+        }
+        &-text {
+          top: 35%;
+          &-first {
+            font-size: 30px;
+            line-height: 30px;
+            padding: 1px 0;
+          }
+          &-second {
+            font-size: 14px;
+            line-height: 12px;
+            padding: 1px 0 1px 20px;
+          }
+        }
       }
     }
   }

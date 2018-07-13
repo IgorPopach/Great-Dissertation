@@ -329,6 +329,26 @@
       border-radius: 15px;
       background: linear-gradient(#e1e3e7, #fff 80%, #e1e3e7);
     }
+    &-back, &-homepage {
+      width: 144px;
+      height: 51px;
+      margin: 30px auto;
+      padding: 16px 0;
+      font-size: 18px;
+      font-family: Tahoma;
+      border: 1px solid $grey-light-color;
+      border-radius: 25px;
+      background: linear-gradient(#e1e3e7, #fff 80%, #e1e3e7);
+      box-shadow: 1px 1px 1px #2a373e;
+      a {
+        color: $grey-text-color;
+        text-decoration: none;
+      }
+      &:hover {
+        box-shadow: 2px 2px 3px #2a373e;
+        transition: all 0.3s;
+      }
+    }
   }
   .padding-top-bottom {
     padding: 60px 0;
