@@ -1,33 +1,41 @@
-.main-content {
-  margin-top: 0;
-  &-blog {
-    font-family: Tahoma;
-    .blog-header {
+.main-content-blog {
+  font-family: Tahoma;
+  .blog-header {
+    &-name {
+      position: relative;
       h1 {
         position: absolute;
         top: -27px;
+        background: url("../img/home/content-home.png") no-repeat;
+        width: 310px;
+        height: 64px;
+        font-family: Georgia;
+        font-size: 25px;
+        line-height: 64px;
+        text-align: center;
+        color: $red-text-color;
       }
-      .links {
-        margin-top: 110px;
-        .posts {
-          font-size: 18px;
-          a {
-            margin-left: 20px;
-            color: $grey-text-color;
-            &:hover {
-              text-decoration: none;
-              color: $orange-color;
-            }
+    }
+    .links {
+      margin-top: 110px;
+      .posts {
+        font-size: 18px;
+        a {
+          margin-left: 20px;
+          color: $grey-text-color;
+          &:hover {
+            text-decoration: none;
+            color: $orange-color;
           }
         }
-        .category {
-          a {
-            margin-left: 20px;
-            color: $grey-text-color;
-            &:hover {
-              text-decoration: none;
-              color: $orange-color;
-            }
+      }
+      .category {
+        a {
+          margin-left: 20px;
+          color: $grey-text-color;
+          &:hover {
+            text-decoration: none;
+            color: $orange-color;
           }
         }
       }
@@ -69,7 +77,7 @@
         }
       }
       &-text {
-        padding: 0 10px 25px 10px;
+        padding: 10px 10px 25px 10px;
 
       }
     }

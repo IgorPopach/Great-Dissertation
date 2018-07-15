@@ -1,0 +1,141 @@
+.blog-inside {
+  .blog-header {
+    h1 {
+      font-family: Georgia;
+      margin: 35px 0;
+      padding-left: 10px;
+      text-align: left;
+      color: $red-text-color;
+    }
+    .m-block {
+      margin-bottom: 25px;
+      padding-top: 7px;
+      padding-right: 15px;
+      text-align: right;
+      a {
+        font: bold 18px Tahoma;
+        margin-bottom: 40px;
+        color: $grey-text-color;
+      }
+      @media screen and (max-width: 768px) {
+        a {
+          font: 14px Tahoma;
+        }
+      }
+    }
+  }
+  .blog-content {
+    ul {
+      padding-left: 0;
+      li {
+        display: inline;
+        margin-right: 20px;
+        a {
+          display: inline-block;
+          color: #354459;
+        }
+      }
+    }
+    p span {
+      font-style: italic;
+    }
+    img {
+      margin-bottom: 20px;
+    }
+    &-text {
+      p {
+        text-align: justify;
+      }
+    }
+    .tags {
+      margin: 30px 0;
+      a {
+        margin: 3px;
+        padding: 10px 15px;
+        color: $grey-text-color;
+        background-color: #f4f5f6;
+        border-radius: 5px;
+        &:hover {
+          color: white;
+          text-decoration: none;
+          background-color: #195375;
+          transition: all .3s;
+        }
+      }
+      @media screen and (max-width: 378px) {
+        a {
+          padding: 5px 10px;
+        }
+      }
+    }
+    .prev-next {
+      margin: 60px 0;
+      text-align: justify;
+      a {
+        text-align: justify;
+        display: inline-block;
+        color: $grey-text-color;
+      }
+      i {
+        margin: 0 5px;
+      }
+      @media screen and (max-width: 768px) {
+        a {
+          text-align: left;
+        }
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+  .comments {
+    .comment {
+      border-top: 1px solid #cccccc;
+      padding-top: 30px;
+      .icon-block {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $grey-text-color;
+        color: white;
+        @media screen and (max-width: 684px) {
+          padding: 4px;
+          border-radius: 2px;
+        }
+      }
+      .fas {
+        font-size: 70px;
+        @media screen and (max-width: 684px) {
+          font-size: 20px;
+        }
+      }
+      p {
+        span {
+          font-weight: bold;
+          font-size: 16px;
+        }
+      }
+      a {
+        color: $grey-text-color;
+        font-weight: bold;
+      }
+    }
+    &-form {
+      .input-area {
+        label {
+          margin-top: 10px;
+          font-weight: bold;
+          font-size: 16px;
+          line-height: 18px;
+        }
+        textarea {
+          width: 100%;
+        }
+        input {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -39,6 +39,9 @@ body {
 			padding-left: 0;
 		}
 	}
+	.img-width {
+		width: 100%;
+	}
 }
 
 @import "views/site-header";
@@ -51,4 +54,5 @@ body {
 @import "partials/beware";
 @import "partials/404";
 @import "partials/blog";
+@import "partials/blog-inside";
 @import "media"; // Always at the end

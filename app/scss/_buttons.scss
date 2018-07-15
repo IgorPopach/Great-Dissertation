@@ -355,6 +355,23 @@
   }
 }
 
+.blog-inside {
+  .btn {
+    width: 144px;
+    height: 40px;
+    margin: 30px 0;
+    padding: 9px 0;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    color: $grey-text-color;
+    border: 1px solid #d9e0e7;
+    border-radius: 5px;
+    background: linear-gradient(#e1e3e7,#fff 80%,#e1e3e7);
+    box-shadow: 1px 1px 1px #2a373e;
+  }
+}
+
 .right-sidebar {
   .btn {
     text-align: center;
