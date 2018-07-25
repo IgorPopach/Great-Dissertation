@@ -20,6 +20,20 @@ body {
 	color: $grey-text-color;
 	background-color: #fff;
 
+	@import "views/site-header";
+	@import "views/sidebars";
+	@import "views/content";
+	@import "views/site-footer";
+	@import "partials/mobile";
+	@import "partials/faq";
+	@import "partials/contact-us";
+	@import "partials/beware";
+	@import "partials/404";
+	@import "partials/blog";
+	@import "partials/blog-inside";
+	@import "partials/my-orders";
+
+
 	.align-center {
 		text-align: center;
 	}
@@ -44,15 +58,5 @@ body {
 	}
 }
 
-@import "views/site-header";
-@import "views/sidebars";
-@import "views/content";
-@import "views/site-footer";
-@import "partials/mobile";
-@import "partials/faq";
-@import "partials/contact-us";
-@import "partials/beware";
-@import "partials/404";
-@import "partials/blog";
-@import "partials/blog-inside";
+
 @import "media"; // Always at the end

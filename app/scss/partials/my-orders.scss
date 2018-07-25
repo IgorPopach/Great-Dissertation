@@ -1,0 +1,103 @@
+.orders {
+  .yellow-block {
+    position: absolute;
+    top: -9px;
+    left: 25px;
+    width: 195px;
+    height: 8px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: linear-gradient(rgb(252, 242, 159), rgb(254, 220, 70));
+    border: 1px solid #eace37;
+    box-shadow: 0px 1px 1px #eace37;
+  }
+  .fa-thumbtack {
+    margin: 0 10px;
+    color: goldenrod;
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 22px;
+    font-family: Georgia, SansSerif;
+    margin: 0;
+    padding: 15px;
+    color: #3173ac;
+
+  }
+  .new-messages {
+    position: relative;
+    padding: 2px;
+    border: 1px solid $grey-border-color;
+    box-shadow: 0 0 3px $grey-light-color;
+    &-head {
+      border-top: 1px solid $grey-border-color;
+      .t-cell {
+        line-height: 25px;
+        text-align: center;
+        border: 1px solid #008be7;
+        background: linear-gradient(#0090d1 4%, #1ba8fd 95%, #a6daff);
+        color: white;
+      }
+    }
+    &-list {
+      p {
+        font-family: Tahoma, SansSerif;
+        margin: 0;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .processing-orders {
+    position: relative;
+    margin-top: 25px;
+    padding: 2px;
+    border: 1px solid $grey-border-color;
+    box-shadow: 0 0 3px $grey-light-color;
+    &-list {
+      border-top: 1px solid $grey-border-color;
+    }
+  }
+  .completed-orders {
+    position: relative;
+    margin-top: 25px;
+    padding: 2px;
+    border: 1px solid $grey-border-color;
+    box-shadow: 0 0 3px $grey-light-color;
+    &-list {
+      border-top: 1px solid $grey-border-color;
+      padding-top: 5px;
+      .bg-grey {
+        background-color: #f6f7f8;
+      }
+      p {
+        margin: 5px 10px;
+      }
+      p.right {
+        text-align: right;
+      }
+      a {
+        display: inline-block;
+        width: 140px;
+        height: 40px;
+        margin: 5px;
+        padding: 10px 0;
+        text-align: center;
+        background-color: #008be7;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    }
+  }
+  .notice {
+    position: relative;
+    margin-top: 25px;
+    padding: 2px;
+    border: 1px solid $grey-border-color;
+    box-shadow: 0 0 3px $grey-light-color;
+    &-text {
+      border-top: 1px solid $grey-border-color;
+      padding: 5px 10px;
+    }
+  }
+}
